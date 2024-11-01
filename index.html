@@ -2,22 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/favicon.ico"/>
-    <title>Flappy Bird Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Flappy Donu</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff; /* Light blue background */
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            border: 5px solid #ffcc00; /* Yellow border */
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 48px;
+            color: #ff6347; /* Tomato color */
+            margin: 0;
+        }
+        .donut {
+            font-size: 100px;
+            margin: 20px 0;
+        }
+        .start-text {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .rotateIn {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes rotateIn {
+  0% {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotate3d(0, 0, 1, -200deg);
+  transform: rotate3d(0, 0, 1, -200deg);
+  opacity: 0;
+  }
+  100% {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  }
+  }
+  @keyframes rotateIn {
+  0% {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotate3d(0, 0, 1, -200deg);
+  transform: rotate3d(0, 0, 1, -200deg);
+  opacity: 0;
+  }
+  100% {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  }
+  } 
+    </style>
 </head>
 <body>
-    <div class="background"></div>
-    <img src="images/aldona.webp" class="bird" id="bird-1">
-    <div class="message">
-        Enter To Start Game <p><span style="color: red;">&uarr;</span> ArrowUp to Control</p>
-    </div>
-    <div class="score">
-        <span class="score_title"></span>
-        <span class="score_val"></span>
-    </div>
+
+    <div class="container">
+        <img src="images/aldona-intro.webp" alt="aldona" class="rotateIn"/>
+       <center> <img src="images/flappy.png" alt="FLAPPY DONU"/>
+        <!-- Emoji representation of a donut --></center>
+        <div class="start-text">Press ENTER KEY to Start!</div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Text Example</title>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+   
+
 </body>
-</html>`
+</html>
+    </div>
+
+    <script>
+        // Add an event listener for the Enter key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                // Start the game or redirect to the game logic
+                window.location.href = "game.html"
+            }
+        });
+    </script>
+
+</body>
+</html>
